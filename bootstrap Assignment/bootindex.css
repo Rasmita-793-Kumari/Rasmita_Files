@@ -1,0 +1,36 @@
+.main{
+    background: url(./image/welcom.jpg);
+    background-size: 100% ;
+    background-attachment: fixed;
+    width:100%;
+    height:650px;
+}
+.headerset{
+    padding-top:240px ;
+    box-sizing: border-box;
+}
+.headerset h1{
+    font-size: 90px;
+    font-weight: bold;
+}
+.headerset h2{
+    font-size: 50px;
+}
+.ourservices{
+    padding: 100px 60px;
+
+}
+.row{
+    
+}
+.footer{
+
+    background-color: rgb(213, 168, 97);
+}
+
+.Navigate{
+    display: flex;
+    margin: 10px;
+}
+
+

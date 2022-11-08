@@ -1,0 +1,73 @@
+body{
+    background-image: linear-gradient(to right top, #2b466f, #4c6285, #6d7f9c, #8f9eb3, #b3bdcb);
+}
+.container{
+    margin-top: 10px;
+    width:100%;
+    font-family: 'Noto Sans Wancho', sans-serif;
+    font-size:medium;
+    font-weight:600;
+    color: white;
+}
+form{
+    width: 40%;
+    margin: auto;
+    padding: 2px 20px;
+    background-image: linear-gradient(to right top, #2b466f, #090909);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.9), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+input[type=text] , [type=email] , [type=password]{
+    width: 100%;
+    height: 25px;
+    border-radius: 10px;
+    border: 2px solid white;
+}
+input[type=checkbox] , [type=radio]{
+    width: 10%;
+}
+.gen , .hobbie{
+    margin:10px 5px ;
+}
+.head{
+    text-align: center;
+}
+.remark textarea{
+    width: 100%;
+    border-radius: 10px;
+    border: 2px solid white;
+}
+.remark{
+    margin: 5px;
+}
+.details{
+    margin: 5px;
+}
+.select{
+    width: 100%;
+    border-radius: 10px;
+    border: 2px solid white;
+    height: 25px;
+}
+.btn1{
+    text-align: center;
+    margin: 5px;
+}
+#btn{
+    padding: 2px 50px;
+    border-radius: 10px;
+    border: 2px solid white;
+    background-color: white;
+}
+#btn:hover{
+    background-color: #2b466f;
+    border: 2px solid #2b466f;
+    color:white;
+}
+
+p{
+    margin: -1px 0px -5px 0px;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+  
+

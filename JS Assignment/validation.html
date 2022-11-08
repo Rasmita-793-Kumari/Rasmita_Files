@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration form</title>
+    <link rel="stylesheet" href="./valid.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Wancho&display=swap" rel="stylesheet">
+
+
+
+
+</head>
+<body>
+    <div class="container">   
+        <form id="regForm" action="">
+        <div class="main-card">
+        <h3 class="head">SignUp</h3>
+        <div class="details">
+            <label>Name</label>
+            <input type="text" id="name" placeholder="Enter your Name" required> 
+            <p id="name1"></p>
+        </div>
+        <div class="details">
+            <label>User name</label>
+            <input type="text" id="uname" placeholder="Enter your user name" required> 
+            <p id="uname1"></p>
+        </div>
+        <div class="details">
+            <label>Email</label>
+            <input type="email" id="email" placeholder="Enter your email" required> 
+            <p id="email1"></p>
+        </div>
+        <div class="details">
+            <label>Password</label>
+            <input type="password" id="password" placeholder="Enter your password" required> 
+            <p id="pwd"></p>
+        </div>
+        <div class="gen">
+            <label>Gender</label>
+            <p id="gender1"></p>
+            <input type="radio"  value="Male" name="gender">Male
+            <input type="radio"  value="female"name="gender">Female
+            
+        </div class="details">
+        <div class="details">
+            <label>Age</label>
+            <input type="text" id="age" placeholder="Enter your age" required>
+            <p id="age1"></p> 
+        </div>
+        <div class="details">
+            <label>Mobile</label>
+            <input type="text" id="mobile" placeholder="mobile number" required>
+            <p id="mno"></p> 
+        </div>
+        <div class="hobbie">
+            Hobbies :<input type="checkbox" name="hobbie" value="singing">singing 
+        <input type="checkbox" name="hobbie" value="drawing"> drawing 
+        <input type="checkbox" name="hobbie" value="Cricket"> cricket
+        <p id="hobbie1"></p>
+        </div>
+        <div class="details">
+            <label>City</label>
+            <select class="select">
+                <option>MUMBAI</option>
+                <option>PUNE</option>
+            </select>    
+        </div>
+        <div class="remark">
+            <label>Remark</label>
+            <textarea name="remark" rows="2" cols="20"></textarea>
+        </div>
+        <div class="btn1">
+        <input type="submit" id="btn" value="Register">
+        </div>
+
+        </div>
+        </form>
+    
+    </div>
+
+    <script>
+        var btn = document.getElementById("btn");
+        var form = document.getElementById("regForm");
+        function handleForm(event) { event.preventDefault(); }
+            form.addEventListener('submit', handleForm);
+        
+            console.log("working");
+        
+        btn.addEventListener("click",function(){
+            var name =document.getElementById("name").value;
+            var Uname =document.getElementById("uname").value;
+            var Email =document.getElementById("email").value;
+            var password =document.getElementById("password").value;
+            var gender = document.getElementsByName("gender");
+            var age = document.getElementById("age").value;
+            var Mobile = document.getElementById("mobile").value;
+            var hobbie = document.getElementsByName("hobbie");
+        
+            var regEmail=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+            var regMobile=/^\d{10}$/;									 
+            var regName =  /^[a-zA-Z ]+$/;	
+            var regUName =  /^[a-zA-Z ]+$/;	
+            let regAge = /\d+/g;			
+            
+           
+            
+            if (regName.test(name)) {
+                var Fname=document.getElementById("name1");
+                var fn=document.getElementById("name");
+                fn.style.border = "red";
+                Fname.innerHTML = "Name should contain capital and small letter";
+                Fname.style.color="red";
+
+            }
+            if (Uname == "" || regUName.test(uname)) {
+                var uname=document.getElementById("uname1");
+                uname.innerHTML = "please enter user name";
+                uname.style.color="red";
+                
+            }
+            if (Email == "" || regEmail.test(email)) {
+                var em=document.getElementById("email1")
+                em.innerHTML = "Email address is not valid";
+                em.style.color="red";
+            }
+
+              
+            if (password == "") {
+                var pswd =document.getElementById("pwd")
+                pswd.innerHTML = "please enter password ";
+                pswd.style.color="red";
+            }
+        
+            if(password.length <6){
+                var pswd=document.getElementById("pwd")
+                pswd.innerHTML = "password between 6 characters which contain at least one  uppercase,lowercase ,digit,special symbol and  ";
+                pswd.style.color="red";
+        
+            }
+
+            if((gender[0].checked == false) && (gender[1].checked == false)){
+                var gender=document.getElementById("gender1");
+                gender.innerHTML = "Please choose your Gender: Male or Female";
+                gender.style.color="red";
+        
+            }
+            if(age == "" || !regAge.test(age)){
+                var age=document.getElementById("age1")
+                age.innerHTML = "Please enter your age";
+                age.style.color="red";
+            }
+            
+            if (Mobile == "" || !regMobile.test(Mobile)) {
+                var name=document.getElementById("mno")
+                name.innerHTML = "Mobile no is Not valid";
+                name.style.color="red";
+            }
+            if ((hobbie[0].checked==false) || (hobbie[1].checked== false) || (hobbie[2].checked== false)) {
+                var hobb=document.getElementById("hobbie1")
+                            hobbinnerHTML = "hobbie Required";
+                            hobb.style.color="red";
+            }
+        })
+        
+        </script>
+
+</body>
+</html>

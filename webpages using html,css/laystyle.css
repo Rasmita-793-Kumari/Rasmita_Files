@@ -1,0 +1,130 @@
+*{
+    margin: 0px auto;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Courier New', Courier, monospace;
+    background: rgb(145, 132, 131);
+}
+#main{
+    width: 1000px;
+    background: white;
+    border: 2px solid black;
+
+}
+#header{
+    height: 100px;
+    background: crimson;
+    color:aliceblue;
+    text-align: center;
+}
+#header h1{
+    padding: 30px 0 0 30px;
+}
+#menu{
+    background: lightcoral;
+    text-align: center;
+}
+#menu ul{
+    margin: 0;
+    padding:0;
+}
+#menu ul li{
+    display: inline-block;
+}
+#menu ul li a{
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: black;
+}
+#menu ul li a:hover{
+    background: gray;
+}
+section{
+    display: flex;
+}
+#content{
+    flex : 800px;
+    min-height: 400px;
+    background: lightblue;
+    padding: 15px;
+    box-sizing: border-box;
+
+}
+#sidebar{
+    flex: 200px;
+    padding: 15px;
+    min-height: 400px;
+    background: lightcoral;
+    box-sizing: border-box;
+}
+.clr{
+    clear:both
+}
+#footer{
+    background: lightsalmon;
+    padding:5px 10px;
+    text-align: center;
+}
+@media screen and (max-width:1020px){
+    #header{
+        color:darkgoldenrod;
+        text-align: center;
+    }
+    #main{
+        width: auto;
+    }
+    #content{
+        width:80%;
+    }
+    #sidebar{
+        width:18%
+    }
+}
+@media screen and (max-width:810px){
+    #header{
+        color:darkgreen;
+        text-align: center;
+    }
+    #main{
+        width: auto;
+    }
+     #main ul li a{
+        padding: 5px 5px;
+    }
+    #content{
+        width:65%;
+    }
+    #sidebar{
+        width:34%
+    }
+
+}
+@media screen and (max-width:510px){
+    #header{
+        color:blue;
+        text-align: center;
+    }
+    #main{
+        width: auto;
+    }
+    #main ul li a{
+        padding: 5px 5px;
+    }
+    section{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    #content{
+        width:100%;
+    }
+    #sidebar{
+        width:100%;
+        min-height: 100px;
+        padding: 10px;
+    }
+
+}
+
+css
